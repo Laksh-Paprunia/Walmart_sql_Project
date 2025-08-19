@@ -7,50 +7,50 @@ This project analyzes Walmart Sales Data using SQL to uncover business insights,
 
 The analysis involves:
 
-Building a database schema
+🗄️ Database schema design
 
-Feature engineering (time, day, month transformations)
+⚙️ Feature engineering (time, day, month transformations)
 
-Financial calculations (COGS, VAT, Gross Profit, Margin %)
+💰 Financial calculations (COGS, VAT, Gross Profit, Margin %)
 
-Exploratory analysis to generate strategic insights
+🔍 Exploratory analysis to generate strategic insights
 
-Business recommendations for Walmart’s sales strategy
+📈 Business recommendations for Walmart’s sales strategy
 
 The goal is to leverage SQL for data-driven decision-making and present clear, actionable insights.
 
 🗄️ Database Schema
 
-The database is named walmartSales and contains a single table: wm_sales_data.
+The database is named walmartSales and contains one main table: wm_sales_data.
 
 Schema Highlights:
 
-Transaction details (invoice_id, branch, city, customer_type, product_line)
+Transaction details → invoice_id, branch, city, customer_type, product_line
 
-Product & sales metrics (unit_price, quantity, VAT, total, cogs, gross_income, gross_margin_pct)
+Product & sales metrics → unit_price, quantity, VAT, total, cogs, gross_income, gross_margin_pct
 
-Time-based attributes (date, time, engineered fields: time_of_day, day_name, month_name)
+Time-based attributes → date, time, engineered fields (time_of_day, day_name, month_name)
 
-Customer feedback (rating)
+Customer feedback → rating
 
 📂 File: schema.sql
- defines and builds this structure.
+ builds this structure.
 
 ⚙️ Feature Engineering
 
-To support deeper analysis, additional fields were engineered:
+Additional fields created to support deeper analysis:
 
-time_of_day → Categorizes sales into Morning, Afternoon, Evening.
+time_of_day → Categorizes sales into Morning, Afternoon, Evening
 
-day_name → Extracts day of week (Mon, Tue, …).
+day_name → Extracts day of the week (Mon, Tue, …)
 
-month_name → Extracts month name (Jan, Feb, …).
+month_name → Extracts month name (Jan, Feb, …)
 
 These transformations enable time-series insights into customer and sales patterns.
 
 💰 Financial Calculations
 
-The financial-guide.md documents how financial metrics were calculated:
+The financial metrics were computed as follows:
 
 COGS = unit_price × quantity
 
@@ -62,19 +62,19 @@ Gross Income = Total − COGS
 
 Gross Margin % = Gross Income / Total
 
-📂 File: financial-guide.md
- provides step-by-step examples.
+📂 Details documented in financial-guide.md
+.
 
 🔍 Strategic Insights
 
-Using SQL queries, several key insights were drawn (see insights.md
+Key findings from the SQL analysis (see insights.md
 ):
 
-Branch & City
+Branch & City Performance
 
 Naypyitaw generates the highest revenue.
 
-Each city has unique opportunities for localized strategies.
+Cities show unique opportunities for localized strategies.
 
 Product Line Performance
 
@@ -82,9 +82,9 @@ Fashion Accessories → Top-selling category.
 
 Food & Beverages → Highest revenue contribution.
 
-Payment & Customer Segmentation
+Customer Behavior & Payments
 
-E-Wallets dominate → push digital payment promotions.
+E-Wallets are the most used → digital promotions recommended.
 
 Member customers contribute significantly → loyalty programs matter.
 
@@ -92,29 +92,27 @@ Seasonality & Timing
 
 March is peak revenue month.
 
-Afternoons generally have higher ratings.
+Afternoons see higher customer ratings.
 
-Tax Impact
+Tax Insights
 
-Naypyitaw faces highest VAT, affecting pricing strategy.
+Naypyitaw faces the highest VAT, affecting pricing strategy.
 
 📈 Recommendations
 
-Based on the insights:
-
 Run targeted marketing campaigns for top product lines.
 
-Offer E-Wallet promotions to boost digital transactions.
+Offer E-Wallet promotions to strengthen digital adoption.
 
-Invest in branch-specific sales strategies.
+Create branch-specific sales strategies.
 
-Strengthen loyalty programs for "Member" customers.
+Strengthen loyalty programs for members.
 
-Align pricing policies with regional VAT variations.
+Adjust pricing policies to account for VAT differences.
 
-Launch seasonal campaigns (especially March).
+Focus seasonal campaigns around March.
 
-Optimize staffing & resources in peak afternoon hours.
+Allocate staffing/resources strategically during peak afternoon hours.
 
 📂 Project Structure
 ├── schema.sql           # Database schema & feature engineering
@@ -141,10 +139,10 @@ Run analysis queries from solution.md.
 
 📚 Learnings
 
-Using SQL for feature engineering in real-world datasets.
+Using SQL for feature engineering on real-world datasets
 
-Extracting business insights beyond raw numbers.
+Extracting business insights beyond raw numbers
 
-Building strategic recommendations from data.
+Building strategic recommendations from data
 
-✨ This project showcases the power of SQL for business analytics, transforming raw sales data into actionable insights for decision-making.
+✨ This project showcases how SQL can transform raw sales data into actionable insights for decision-making.
